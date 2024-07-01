@@ -1,0 +1,60 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.results {
+    background-color: v.$slate900;
+    padding: 2rem;
+    
+    .results_title {
+        text-align: left;
+        color: v.$slate100;
+        margin-bottom: 1.5rem;
+        padding-top: 1rem;
+    }
+    
+    .results_description {
+        line-height: 1.4;
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+
+        @include m.tablet {
+            font-size: 1.6rem;
+        }
+    }
+    
+    .results_repay {
+        background-color: v.$black;
+        padding: 1.5rem;
+        box-shadow: 0px -5px 0px 0px v.$lime;
+        border-radius: .5rem;
+
+        .results_repay-monthly,
+        .results_repay-term {
+            
+            p {
+                font-size: 1.5rem;
+                
+                @include m.tablet {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        .results_repay-monthly {
+            padding: 1rem 0 2rem 0;
+            border-bottom: 1px solid v.$slate700;
+
+            &::last-child {
+                padding-top: 2rem;
+            }
+        }
+
+        .results_repay-term {
+            padding: 1rem 0;
+
+            &:last-child {
+                padding-top: 2rem;
+            }
+        }
+    }
+}

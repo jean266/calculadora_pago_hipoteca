@@ -10,11 +10,14 @@ html {
 }
 body {
     font-family: v.$fuente_principal;
-    font-size: 1.6rem;
-    line-height: 1.8;
-    background-color: v.$greenLighter;
-    color: v.$greyDarker;
+    font-size: 1.4rem;
+    background-color: v.$slate100;
+    color: v.$slate700;
     font-weight: 500;
+
+    @include m.tablet {
+        font-size: 1.6rem;
+    }
 }
 p {
     font-size: 1.6rem;
@@ -32,11 +35,10 @@ picture {
 }
 
 h1, h2, h3 {
-    font-family: v.$fuente_principal;
     margin: calc(v.$separacion / 2);
     font-weight: 300;
     text-align: center;
-    color: v.$greyDarker;
+    color: v.$slate900;
 }
 
 h1 {

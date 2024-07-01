@@ -1,0 +1,84 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.calculate {
+    padding: 2rem;
+}
+
+.calculate_header {
+    padding-top: 1rem;
+    margin-bottom: 2.5rem;
+
+    .calculate_header-title {
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+
+    .calculate_header-clear {
+        font-size: 1.5rem;
+        text-decoration: underline;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include m.tablet {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.calculate_form {
+
+    .calculate_form-input {
+        width: 100%;
+        border: 1px solid v.$slate500;
+        border-radius: .5rem;
+        margin-top: 1rem;
+        margin-bottom: 2.5rem;
+        z-index: 1;
+        display: flex;
+        gap: 1rem;
+        
+        span {
+            padding: 1.3rem;
+            display: inline-block;
+            background-color: v.$slate100;
+            font-weight: 700;
+            border-radius: .5rem 0 0 .5rem;            
+        }
+
+        .calculate_form-input--years {
+            border-radius: 0 .5rem .5rem 0;
+        }
+
+        input {
+            width: 100%;
+            border: none;
+            border-radius: .5rem;
+            font-weight: 700;
+            
+            &:focus-visible {
+                outline: none;
+            }
+        }
+    }
+
+    .calculate_form-btn {
+        @include m.boton(v.$lime, flex);
+        color: v.$slate900;
+        border-radius: 5rem;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+            width: 2.5rem;
+            display: inline-block;
+        }
+        
+        p {
+            display: inline-block;
+        }
+    }
+}
