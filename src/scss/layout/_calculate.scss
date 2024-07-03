@@ -3,15 +3,43 @@
 
 .calculate {
     padding: 2rem;
+
+    @include m.telefono {
+        padding: 3rem;
+    }
+
+    @include m.tablet {
+        width: 100%;
+        flex: 1;
+    }
 }
 
 .calculate_header {
     padding-top: 1rem;
     margin-bottom: 2.5rem;
 
+    @include m.telefono {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+
+    @include m.tablet {
+        padding-top: 0;
+    }
+
     .calculate_header-title {
         margin-bottom: 1rem;
         text-align: left;
+
+        @include m.telefono {
+            margin-bottom: 0;
+        }
+
+        @include m.tablet {
+            font-size: 2.5rem;
+        }
     }
 
     .calculate_header-clear {
@@ -30,26 +58,43 @@
 
 .calculate_form {
 
+    @include m.telefono {
+        .query-tablet {
+            display: flex;
+            gap: 1.5rem;
+        }
+    }
+
     .calculate_form-input {
         width: 100%;
-        border: 1px solid v.$slate500;
+        border: 1px solid v.$slate700;
         border-radius: .5rem;
         margin-top: 1rem;
         margin-bottom: 2.5rem;
         z-index: 1;
         display: flex;
-        gap: 1rem;
         
         span {
-            padding: 1.3rem;
+            padding: 1rem 1.5rem;
             display: inline-block;
             background-color: v.$slate100;
             font-weight: 700;
-            border-radius: .5rem 0 0 .5rem;            
+            border-radius: 0 .5rem .5rem 0;   
         }
 
-        .calculate_form-input--years {
-            border-radius: 0 .5rem .5rem 0;
+        .calculate_form-input--amount {
+            border-radius: .5rem 0 0 .5rem;
+        }
+
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        input[type=number] {
+            -moz-appearance: none;
+            appearance: none;
         }
 
         input {
@@ -57,9 +102,11 @@
             border: none;
             border-radius: .5rem;
             font-weight: 700;
+            padding: 1rem 1.5rem;
             
             &:focus-visible {
                 outline: none;
+                appearance: none;
             }
         }
     }
@@ -71,6 +118,14 @@
         justify-content: center;
         align-items: center;
         gap: 1rem;
+
+        @include m.telefono {
+            width: 60%;
+        }
+
+        @include m.tablet {
+            width: 80%;
+        }
 
         img {
             width: 2.5rem;

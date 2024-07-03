@@ -2,58 +2,106 @@
 @use 'base/mixins' as m;
 
 .results {
-    background-color: v.$slate900;
+    background-color: lighten(v.$slate900, 5);
     padding: 2rem;
     
+    @include m.telefono {
+        border-radius: 0 0 1.5rem 1.5rem;
+        padding: 3rem;
+    }
+    
+    @include m.tablet {
+        border-radius: 0 1.5rem 1.5rem 5rem;
+        width: 100%;
+        flex: 1;
+
+        .results-empty {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    .results_imagen {
+        width: 20rem;
+        margin: 0 auto;
+    }
+    
     .results_title {
-        text-align: left;
-        color: v.$slate100;
+        color: v.$white;
         margin-bottom: 1.5rem;
         padding-top: 1rem;
+
+        @include m.tablet {
+            padding-top: 0;
+        }
     }
     
     .results_description {
         line-height: 1.4;
-        margin-bottom: 3rem;
         font-size: 1.5rem;
-
+        color: v.$slate300;
+        
         @include m.tablet {
+            text-align: center;
             font-size: 1.6rem;
         }
     }
     
+    // Estilos para el resultado lleno
+    .results_description-filled {
+        margin-bottom: 3rem;
+    }
+    
+    .results_title-filled {
+        text-align: left;
+    }
     .results_repay {
-        background-color: v.$black;
+        background-color: v.$slate900;
         padding: 1.5rem;
-        box-shadow: 0px -5px 0px 0px v.$lime;
+        box-shadow: 0px -3px 0px 0px v.$lime;
         border-radius: .5rem;
+        
+        @include m.telefono {
+            padding: 1.5rem 2.5rem;
+        }
 
         .results_repay-monthly,
         .results_repay-term {
             
             p {
                 font-size: 1.5rem;
+                color: v.$slate300;
+
                 
                 @include m.tablet {
                     font-size: 1.6rem;
                 }
             }
+
         }
 
         .results_repay-monthly {
             padding: 1rem 0 2rem 0;
             border-bottom: 1px solid v.$slate700;
 
-            &::last-child {
-                padding-top: 2rem;
+            #amount-monthly {
+                padding-top: 1.5rem;
+                color: v.$lime;
+                font-size: 3.5rem;
+                font-weight: 700;
             }
         }
-
+        
         .results_repay-term {
             padding: 1rem 0;
-
-            &:last-child {
-                padding-top: 2rem;
+            
+            #amount-term {
+                padding-top: 1.5rem;
+                font-size: 2rem;
+                font-weight: 700;
+                color: v.$white;
             }
         }
     }

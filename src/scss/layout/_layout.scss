@@ -4,6 +4,19 @@
 .container_main {
     background-color: v.$white;
 
+    @include m.telefono {
+        width: 90%;
+        margin: 3rem 0;
+        border-radius: 1.5rem;
+    }
+    
+    @include m.tablet {
+        max-width: 100rem;
+        width: 80%;
+        display: flex;
+        margin: 10rem 0;
+    }
+
     h1, h2 {
         font-size: 2rem;
         margin: 0;

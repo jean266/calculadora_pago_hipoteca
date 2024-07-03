@@ -27,40 +27,46 @@
             <label for="amount">Mortgage Amount</label>
 
             <div class="calculate_form-input">
-                <span>&#8364</span>
+                <span class="calculate_form-input--amount">&#163</span>
                 <input type="number" name="amount" id="amount">
             </div>
           </div>
 
-          <div>
-            <label for="term">Mortgage Term</label>
-
-            <div class="calculate_form-input">
-              <input type="number" name="term" id="term">
-              <span class="calculate_form-input--years">years</span>
+          <div class="query-tablet"> <!-- .query-tablet -->
+            <div>
+              <label for="term">Mortgage Term</label>
+  
+              <div class="calculate_form-input">
+                <input type="number" name="term" id="term">
+                <span>years</span>
+              </div>
             </div>
-          </div>
-
-          <div>
-            <label for="interest">Interest Rate</label>
-
-            <div class="calculate_form-input">
-              <span>&#37</span>
-              <input type="number" name="interest" id="interest">
+  
+            <div>
+              <label for="interest">Interest Rate</label>
+  
+              <div class="calculate_form-input">
+                <input type="number" name="interest" id="interest">
+                <span>&#37</span>
+              </div>
             </div>
-          </div>
+          </div> <!-- .query-tablet -->
 
           <div>
             <label for="type">Mortgage Type</label>
 
-            <div class="calculate_form-input">
+            <div class="calculate_form-radio">
             
-              <div>
-                <input type="radio" name="interest" id="type">Repayment
+              <div class="inputs_radio">
+                <label class="radio">Repayment
+                  <input type="radio" name="interest" id="type" value="Repayment"><span class="check"></span>
+                </label>
               </div>
             
-              <div>
-                <input type="radio" name="interest">Interest Only
+              <div class="inputs_radio">
+                <label class="radio">Interest Only
+                  <input type="radio" name="interest" value="interest only"><span class="check"></span>
+                </label>
               </div>
 
             </div>
@@ -75,26 +81,36 @@
 
       </section> <!-- .calculate -->
 
-      <section class="results"> <!-- .results -->
+      <section class="results" id="results"> <!-- .results -->
 
-        <h2 class="results_title">Your results</h2>
+        <div class="results-empty">
+          <div class="results_imagen">
+            <img src="assets/images/illustration-empty.svg" alt="ilustration empty">
+          </div>
+  
+          <h2 class="results_title">Results shown here</h2>
+  
+          <p class="results_description">Complete the form and click "calculate repayments” to see what your monthly repayments would be.</p>
+        </div>
 
-        <p class="results_description">  Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.
+        <!-- <h2 class="results_title results_title-filled">Your results</h2>
+
+        <p class="results_description results_description-filled">  Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.
         </p>
 
         <div class="results_repay">
           <div class="results_repay-monthly">
             <p>Your monthly repayments</p>
   
-            <p id="amount-monthly"><span>&#8364</span>1,797.74</p>
+            <p id="amount-monthly"><span>&#163</span>1,797.74</p>
           </div>
 
           <div class="results_repay-term">
-            <p>total you'll repay over the term</p>
+            <p>Total you'll repay over the term</p>
   
-            <p id="amount-term"><span>&#8364</span>539,322.94</p>
+            <p id="amount-term"><span>&#163</span>539,322.94</p>
           </div>
-        </div>
+        </div> -->
 
       </section> <!-- .results -->
 
@@ -103,9 +119,4 @@
   </body>
   </html>
 
-  
-<!-- 
 
-  
-
-  Total you'll repay over the term -->

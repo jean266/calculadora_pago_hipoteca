@@ -1,0 +1,75 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.calculate_form-radio {
+
+    .inputs_radio {
+        border: 1px solid v.$slate700;
+        margin-top: 1rem;
+        border-radius: .5rem;
+        color: v.$slate900;
+    }
+    
+    .radio {
+        display: block;
+        position: relative;
+        font-weight: 800;
+        cursor: pointer;
+        padding: 1rem;
+        padding-left: 5rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        input {
+            appearance: none;
+            visibility: hidden;
+            position: absolute;
+            left: 0;
+        }
+
+        input + .check {
+            border: 2px solid v.$slate900;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 1.5rem;
+        }
+
+        input[type=radio] + .check {
+            height: 1.6rem;
+            width: 1.6rem;
+            border-radius: 100%;
+        }
+
+        input[type=radio] + .check::before {
+            content: '';
+            display: block;
+            height: .8rem;
+            width: .8rem;
+            border-radius: 100%;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            background-color: v.$lime;
+            transition: all 0.2s ease;
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        input[type=radio]:checked + .check::before {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        input[type=radio]:checked + .check{
+            border: .2rem solid v.$lime; 
+        }
+    }
+}
