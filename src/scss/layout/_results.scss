@@ -42,9 +42,9 @@
         line-height: 1.4;
         font-size: 1.5rem;
         color: v.$slate300;
+        text-align: center;
         
         @include m.tablet {
-            text-align: center;
             font-size: 1.6rem;
         }
     }
@@ -52,7 +52,6 @@
     // Estilos para el resultado lleno
     .results_description-filled {
         margin-bottom: 3rem;
-        text-align: center;
     }
     
     .results_title-filled {
