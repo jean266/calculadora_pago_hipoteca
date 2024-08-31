@@ -52,6 +52,10 @@
     // Estilos para el resultado lleno
     .results_description-filled {
         margin-bottom: 3rem;
+
+        @include m.telefono {
+            text-align: left;
+        }
     }
     
     .results_title-filled {

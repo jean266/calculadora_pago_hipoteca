@@ -17,15 +17,19 @@
 .calculate_header {
     padding-top: 1rem;
     margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
 
     @include m.telefono {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         margin-bottom: 3rem;
     }
-
+    
     @include m.tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         padding-top: 0;
     }
 
@@ -79,11 +83,11 @@
             display: inline-block;
             background-color: v.$slate100;
             font-weight: 700;
-            border-radius: 0 .5rem .5rem 0;   
+            border-radius: 0 .3rem .3rem 0;   
         }
 
         .calculate_form-input--amount {
-            border-radius: .5rem 0 0 .5rem;
+            border-radius: .3rem 0 0 .3rem;
         }
 
         input[type=number]::-webkit-inner-spin-button, 
@@ -111,6 +115,15 @@
         }
     }
 
+    .focus {
+        border: 1px solid v.$lime;
+
+        span {
+            background-color: v.$lime;
+            color: v.$slate900;
+        }
+    }
+
     .calculate_form-btn {
         @include m.boton(v.$lime, flex);
         color: v.$slate900;
@@ -132,8 +145,28 @@
             display: inline-block;
         }
         
-        p {
+        input[type=submit] {
             display: inline-block;
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+            font-weight: 600;
         }
+    }
+
+    .alert_input {
+        border: 1px solid v.$red;
+
+        span {
+            background-color: v.$red;
+            color: v.$slate100;
+        }
+    }
+
+    .alert {
+        font-size: 1.2rem;
+        color: v.$red;
+        margin-top: -1.5rem;
+        margin-bottom: 2.5rem;
     }
 }

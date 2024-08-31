@@ -41,8 +41,8 @@ Los usuarios deberían poder:
 
 ### Enlaces
 
-- URL de la solución: [GitHub]()
-- URL del sitio en vivo: [Vervel]()
+- URL de la solución: [GitHub](https://github.com/jean266/calculadora_pago_hipoteca)
+- URL del sitio en vivo: [Vervel](https://calculadora-pago-hipoteca.vercel.app/)
 
 ## Mi proceso
 
@@ -57,25 +57,10 @@ Los usuarios deberían poder:
 
 ### Lo que aprendí
 
-```html
-<span>&#163</span><!-- Codigo HTML -->
-```
-```css
-.proud-of-this-css {
-color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-console.log('🎉')
-}
+new Intl.NumberFormat("es-CO").format(number) /* Da formato tipo moneda a un numero */
 ```
-
-### Recursos útiles
-
-- [Codigos HTML](https://ascii.cl/es/codigos-html.htm):  Esto me ayudo a conocer los codigos HTMl para los caracteres como "monedero" y "porcentaje".
   
 ## Autor
 
 - Mentor de frontend: [@jean266](https://www.frontendmentor.io/profile/jean266)
-- Twitter: [@yourusername](https://www.twitter.com/yourusername)

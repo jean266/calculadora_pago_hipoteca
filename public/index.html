@@ -18,7 +18,7 @@
         <div class="calculate_header">
           <h1 class="calculate_header-title">Mortgage Calculator</h1>
           
-          <p class="calculate_header-clear">Clear All</p>
+          <p class="calculate_header-clear" id="clear-all" tabindex="7">Clear All</p>
         </div>
 
         <form class="calculate_form"><!-- .calculate_form -->
@@ -28,7 +28,7 @@
 
             <div class="calculate_form-input">
                 <span class="calculate_form-input--amount">&#163</span>
-                <input type="number" name="amount" id="amount">
+                <input type="tel" pattern="[0-9]+" name="amount" id="amount" tabindex="1">
             </div>
           </div>
 
@@ -37,7 +37,7 @@
               <label for="term">Mortgage Term</label>
   
               <div class="calculate_form-input">
-                <input type="number" name="term" id="term">
+                <input type="number" name="term" id="term" tabindex="2">
                 <span>years</span>
               </div>
             </div>
@@ -46,35 +46,35 @@
               <label for="interest">Interest Rate</label>
   
               <div class="calculate_form-input">
-                <input type="number" name="interest" id="interest">
+                <input type="number" name="interest" id="interest" tabindex="3">
                 <span>&#37</span>
               </div>
             </div>
           </div> <!-- .query-tablet -->
 
-          <div>
+          <div class="calculate_radio">
             <label for="type">Mortgage Type</label>
 
             <div class="calculate_form-radio">
             
-              <div class="inputs_radio">
+              <div class="inputs_radio" tabindex="4">
                 <label class="radio">Repayment
-                  <input type="radio" name="interest" id="type" value="Repayment"><span class="check"></span>
+                  <input type="radio" name="interest" id="type" value="1"><span class="check"></span>
                 </label>
               </div>
             
-              <div class="inputs_radio">
+              <div class="inputs_radio" tabindex="5">
                 <label class="radio">Interest Only
-                  <input type="radio" name="interest" value="interest only"><span class="check"></span>
+                  <input type="radio" name="interest" value="2"><span class="check"></span>
                 </label>
               </div>
 
             </div>
           </div>
 
-          <div class="calculate_form-btn">
+          <div class="calculate_form-btn" tabindex="6">
             <img src="assets/images/icon-calculator.svg" alt="icon calculator">
-            <p>Calculate Repayments</p>
+            <input type="submit" value="Calculate Repayments">
           </div>
 
         </form><!-- .calculate_form -->
@@ -93,29 +93,11 @@
           <p class="results_description">Complete the form and click "calculate repayments” to see what your monthly repayments would be.</p>
         </div>
 
-        <!-- <h2 class="results_title results_title-filled">Your results</h2>
-
-        <p class="results_description results_description-filled">  Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.
-        </p>
-
-        <div class="results_repay">
-          <div class="results_repay-monthly">
-            <p>Your monthly repayments</p>
-  
-            <p id="amount-monthly"><span>&#163</span>1,797.74</p>
-          </div>
-
-          <div class="results_repay-term">
-            <p>Total you'll repay over the term</p>
-  
-            <p id="amount-term"><span>&#163</span>539,322.94</p>
-          </div>
-        </div> -->
-
       </section> <!-- .results -->
 
     </main> <!-- .container_main -->
     
+    <script type="module" src="build/js/app.js"></script>
   </body>
   </html>
 

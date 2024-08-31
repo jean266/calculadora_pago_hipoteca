@@ -8,6 +8,12 @@
         margin-top: 1rem;
         border-radius: .5rem;
         color: v.$slate900;
+
+    }
+
+    .checked {
+        border: 1px solid v.$lime;
+        background-color: lighten(v.$lime, 40);
     }
     
     .radio {
@@ -72,4 +78,8 @@
             border: .2rem solid v.$lime; 
         }
     }
+}
+
+.calculate_form-radio {
+    margin-bottom: 2.5rem;
 }

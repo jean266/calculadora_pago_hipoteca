@@ -1,0 +1,1 @@
+export function scrolling(o,e){window.scrollTo(o,e)}export function removeClasses(o){document.querySelectorAll(`.${o}`).forEach((e=>{e.classList.remove(o)}))}

@@ -1,0 +1,1 @@
+import App from"./classes/App.js";const app=new App;document.addEventListener("DOMContentLoaded",(()=>{app.initApp()}));
